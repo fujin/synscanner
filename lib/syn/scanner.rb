@@ -72,7 +72,7 @@ module Syn
       benches = 100
       Benchmark.bm do |x|
         x.report("time for single syn scan") { run_batch(hosts) }
-        x.report("time for 100 syn scans") { benches.times { run_batch(hosts) } }
+        x.report("time for 100 hosts, batch") { run_batch(hosts * 100) }
       end
     end
 

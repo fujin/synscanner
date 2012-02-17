@@ -1,6 +1,7 @@
 require 'bundler'
-
 Bundler.require
+
+require 'benchmark'
 
 module Syn
   class Scanner
@@ -68,7 +69,7 @@ module Syn
     def initialize()
       open_pcap
       hosts = %w[169.254.169.254]
-      puts run_batch(hosts)
+      puts Benchmark.measure { run_batch(hosts) }
     end
 
     def run_batch(hosts)

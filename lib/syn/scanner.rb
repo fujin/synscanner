@@ -69,11 +69,7 @@ module Syn
     def initialize()
       open_pcap
       hosts = %w[169.254.169.254]
-      benches = 100
-      Benchmark.bm do |x|
-        x.report("time for single syn scan") { run_batch(hosts) }
-        x.report("time for 100 hosts, batch") { run_batch(hosts * 100) }
-      end
+      puts Benchmark.measure { run_batch(hosts) }
     end
 
     def run_batch(hosts)

@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+
+require "rubygems" unless RUBY_PLATFORM =~ /1.9/
+
+lib = File.expand_path('../../lib', __FILE__)
+$:.unshift(lib) unless $:.include?(lib)
+
+require_relative "../lib/syn"
+require_relative "../lib/syn/scanner"
+
+Syn::Scanner.new

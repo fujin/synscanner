@@ -1,0 +1,20 @@
+PATH
+  remote: .
+  specs:
+    syn (0.0.1)
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+    librex (0.0.65)
+    packetfu (1.1.5)
+    pcaprub (0.11.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  librex (~> 0.0.65)
+  packetfu (~> 1.1.5)
+  pcaprub (~> 0.11.2)
+  syn!
